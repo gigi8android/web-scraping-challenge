@@ -1,0 +1,296 @@
+/* *************************************************** */ 
+/* MyStyle sheet */
+/* *************************************************** */ 
+
+/* ************** Color picker website *************** */
+/* https://www.w3schools.com/colors/colors_picker.asp */
+/* *************************************************** */ 
+
+/* Define boostrap alternative containers attributes*/
+  .container1{
+    margin-top:10px;
+    margin-left:220px; 
+    margin-right:30px;
+    margin-bottom:30px;
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    position: relative;
+  }
+  
+  .container2{
+    margin-top:50px; 
+    margin-right:30px;
+    padding-right: 10px;
+  }
+/* *************************************************** */ 
+
+/* Image sizing attributes */
+  .img_100pc {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  .img_80pc {
+    width: 80% !important;
+    height: 80% !important;
+    /* padding-right: 20px; */
+  }
+/* *************************************************** */
+ 
+/* ******** Define box attributes ******** */
+  .left_box {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top:10px;
+    margin-bottom:40px;  
+    background-color:rgba(32, 55, 76, 0.5);
+    background-color: var(--bs-body-bg);
+    /* border-spacing: 100px; */
+    border-style: solid;
+    border-block-color:var(--bs-light);
+  }
+  
+  .right_box {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top:10px;
+    margin-bottom:40px; 
+    /* background-color:rgba(103, 170, 235, 0.5); */
+    background-color: rgba(32, 55, 76, 0.5);
+        /* border-spacing: 100px; */
+    /* border-style: solid; */
+    /* border-block-color:var(--bs-light); */
+  }
+   
+  .box2{
+    padding: 10px 15px;
+    /* background: white; */
+    margin-top:20px;
+    margin-bottom:20px; 
+    margin-left:150px; 
+    margin-right:30px; 
+    width: 1000px;
+    height: 600px;
+    color:black;
+    background-color: white; 
+  }
+
+  .box{
+    padding: 10px 15px;
+    /* background: white; */
+    margin-top:30px;
+    margin-bottom:40px; 
+    color:black;
+    background-color: white; 
+  }
+/* *************************************************** */  
+  
+/* ******** Define column attributes ******* */
+  .col-lg-1a {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 3%;
+  }
+  .col-lg-2a {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 16.666667%;
+  }
+  .col-lg-3a {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 30%;
+  }
+  .col-lg-4a {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 33.333333%;
+  }
+  .col-lg-5a {
+    -ms-flex: 0 0 35.6667;
+    flex: 0 0 35.6667%;
+    width: 35.666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+  .col-lg-6a {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .col-lg-7a {
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    width: 58.333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+/* *************************************************** */
+
+/* Define the zoom property to zoom in/out an image */
+  .zoom {
+    /* padding: 50px; */
+    transition: transform .2s; /* Animation */
+    /* width: 200px;
+    height: 200px; */
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(2); /* set zoom percentage, 2 = 200% zoom out) */
+    position: relative;
+    z-index: 2;
+  }
+/* *************************************************** */
+
+/* ******* Other miscellanous attributes ******* */
+  .psml {
+    font-size: small;
+    text-align: center;
+  }
+  
+  .justify {
+    text-align: justify;
+  } 
+  
+  .pad_top {
+    padding-top: 20px;
+  }
+
+  .center {
+    margin: 0;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+/* *************************************************** */
+
+/* Customise media for displaying in the smaller size window */
+  @media (max-width: 550px){
+    .box .left_box .box2 {
+    margin-right: 30px;
+    margin-left: 30px;
+    }
+    .col-lg-3a .col-lg-1a .col-lg-6a > * {
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      width: auto;
+    }
+    .zoom:hover {
+      transform: scale(0.3)  
+    }
+    .container1 {
+      max-width: 50%;
+      max-height: 50%;
+    }
+    .img_100pc .img_80pc{
+      width: 50% !important;;
+      height: 50% !important;;
+    }
+  }
+/* *************************************************** */
+
+/* Create a fixed table header with scrollable table body */
+  .fixed_header {
+    width: 400px;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+  .fixed_header tbody {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    height: 600px;
+  }
+  .fixed_header thead tr {
+    display: block;
+  }
+  .fixed_header thead {
+    background: #20374c;
+    color: #fff;
+  }
+  .fixed_header th,
+  .fixed_header td {
+    padding: 5px;
+    text-align: left;
+    width: 200px;
+  }
+/* *************************************************** */
+
+/* ***************** Background image *************** */
+.bg-image {
+  /* The image used */
+  background-image: url('/images/mission_to_mars.png');
+
+  /* Add the blur effect */
+  /* filter: blur(8px);
+  -webkit-filter: blur(8px); */
+
+  /* Full height */
+  height: 100%;
+  width: 1200px;
+  /* background-size: 100%; */
+  
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+/* *************************************************** */
+
+/* ************* Animated Button ********************* */
+/* Use:  <button class="button" style="vertical-align:middle"><span> Hover </span></button> */
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 300px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/* *************************************************** */
